@@ -20,7 +20,7 @@ def preprocess(fname):
 
 # hyper-parameters
 # npz_fname = 'models/yolo-voc.weights.npz'
-# h5_fname = 'models/yolo-voc.weights.h5'
+h5_fname = 'yolo-voc.weights.h5'
 trained_model = cfg.trained_model
 # trained_model = os.path.join(cfg.train_output_dir, 'darknet19_voc07trainval_exp3_158.h5')
 thresh = 0.5
@@ -61,11 +61,11 @@ for i, (image, im_data) in enumerate(pool.imap(preprocess, im_fnames, chunksize=
 
     if im2show.shape[0] > 1100:
         im2show = cv2.resize(im2show, (int(1000. * float(im2show.shape[1]) / im2show.shape[0]), 1000))
-    cv2.imshow('test', im2show)
+    cv2.imwrite('test_{}.jpg'.format(i), im2show)
 
     total_time = t_total.toc()
     # wait_time = max(int(60 - total_time * 1000), 1)
-    cv2.waitKey(0)
+    #cv2.waitKey(0)
 
     if i % 1 == 0:
         format_str = 'frame: %d, (detection: %.1f Hz, %.1f ms) (total: %.1f Hz, %.1f ms)'
