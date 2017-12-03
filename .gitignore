@@ -220,5 +220,7 @@ ENV/
 .mypy_cache/
 
 # dataset folders
+PeopleArt/
+PhotoArt50/
 /PeopleArt-master
 /PhotoArt50-master
