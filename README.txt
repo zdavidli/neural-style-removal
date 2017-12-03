@@ -16,3 +16,15 @@ Detecting objects in artwork with R-CNN, Fast R-CNN, and YOLO/YOLOv2 (in PyTorch
   3. 
     a. Try "removing" style with neural style transfer from painting to photograph.
     b. Try "removing" style by tuning parameters in neural style transfer.
+
+
+Presentation Goal:
+* Have pre-trained results of some R-CNN variant and YOLO on PeopleArt and PhotoArt50 
+* (Hopefully) train one of R-CNN variant and YOLO on PeopleArt or PhotoArt50
+* Have basic neural style removal
+
+Current progress:
+* Have some neural style removal, not good in general, but have one figure and can explain what we've tried and what we can keep trying
+* Have DataLoader for PeopleArt, PeopleArt photos
+* (David) Working on YOLO pre-trained
+* 
